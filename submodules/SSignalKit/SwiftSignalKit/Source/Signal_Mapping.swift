@@ -128,3 +128,21 @@ public func distinctUntilChanged<T, E>(isEqual: @escaping (T, T) -> Bool) -> (_ 
         }
     }
 }
+
+///Converts error  to value.
+///
+///- parameter value: Element to return in case of error.
+///- returns: Signal without Error.
+public func onErrorJustReturn<T, E>(_ value:T) -> (Signal<T, E>) -> Signal<T, NoError> {
+    return { signal in
+        return Signal<T, NoError> { subscriber in
+            return signal.start(next: { next in
+                subscriber.putNext(next)
+            }, error: { error in
+                subscriber.putNext(value)
+            }, completed: {
+                subscriber.putCompletion()
+            })
+        }
+    }
+}
