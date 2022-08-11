@@ -38,5 +38,9 @@ let package = Package(
                            .product(name: "Reachability", package: "Reachability", condition: nil),
                            .product(name: "EncryptionProvider", package: "EncryptionProvider", condition: nil)],
             path: "Sources"),
+        .testTarget(
+            name: "TelegramCoreTests",
+            dependencies: ["TelegramCore"],
+            path: "Tests"),
     ]
 )

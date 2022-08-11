@@ -4,6 +4,20 @@
 * A new [UnixTimeFetcher](submodules/TelegramCore/Sources/TelegramEngine/UnixTime/UnixTimeFetcher.swift) api added in to TelegramEngine
 * You can review changes in [this pull request](https://github.com/0x384c0/Telegram-iOS/pull/3/files)
 
+
+# Compilation Guide For iOS Simulator
+
+1. Install Xcode (directly from https://developer.apple.com/download/more or using the App Store).
+2. Clone the project from GitHub:
+
+```
+git clone --recursive -j8 https://github.com/0x384c0/Telegram-iOS.git
+```
+3. Generate Xcode project
+```
+sh generate-debug-project.sh
+```
+
 # Compilation Guide
 
 1. Install Xcode (directly from https://developer.apple.com/download/more or using the App Store).

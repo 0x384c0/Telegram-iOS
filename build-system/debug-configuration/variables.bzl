@@ -10,6 +10,6 @@ telegram_appstore_id = "686449807"
 telegram_app_specific_url_scheme = "tg"
 telegram_premium_iap_product_id = "org.telegram.telegramPremium.monthly"
 telegram_aps_environment = "Development"
-telegram_enable_siri = False
+telegram_enable_siri = True
 telegram_enable_icloud = False
 telegram_enable_watch = False
